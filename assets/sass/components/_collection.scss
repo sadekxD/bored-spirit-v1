@@ -1,0 +1,60 @@
+.collection {
+    @extend %of-hidden;
+
+    &__thumb {
+
+        &-slider-1 {
+            height: 205px;
+
+            @include breakpoint(sm) {
+                height: 305px;
+            }
+
+            @include breakpoint(md) {
+                height: 370px;
+            }
+
+            @include breakpoint(lg) {
+                height: 270px;
+            }
+
+            @include breakpoint(xl) {
+                height: 320px;
+            }
+
+            @include breakpoint(xxl) {
+                height: 380px;
+            }
+        }
+
+        &-slider-2 {
+            height: 380px;
+
+            @include breakpoint(sm) {
+                height: 550px;
+            }
+
+            @include breakpoint(md) {
+                height: 660px;
+            }
+
+            @include breakpoint(lg) {
+                height: 490px;
+            }
+
+            @include breakpoint(xl) {
+                height: 580px;
+            }
+
+            @include breakpoint(xxl) {
+                height: 680px;
+            }
+        }
+
+        &-item {
+            img {
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.banner {
+    @extend %of-hidden;
+    @extend %p-rel;
+    @include background-cover;
+    padding-block: 100px;
+
+    @include breakpoint(lg) {
+        padding-block: 160px;
+    }
+
+    @include breakpoint(xxl) {
+        padding-block: 220px;
+    }
+
+
+    &__content {
+        @extend %p-rel;
+        z-index: 1;
+
+        h1 {
+            @extend %mb-20;
+            text-transform: capitalize;
+
+        }
+
+        h1,
+        p {
+            color: $text-color;
+        }
+
+        p {
+            max-inline-size: 35ch;
+            margin-inline: auto;
+            @extend %mb-45;
+            @include font-size(30px);
+            line-height: 1.65;
+        }
+    }
+
+    &__thumb {
+        @include breakpoint(lg) {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
+
+.bg-attach--fixed {
+    @include breakpoint(lg) {
+        background-attachment: fixed;
+    }
+
+}

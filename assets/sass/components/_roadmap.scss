@@ -1,0 +1,52 @@
+.roadmap {
+    @extend %of-hidden;
+
+    &__item {
+        padding: 30px 20px;
+        background: $black-color;
+        border-radius: 5px;
+        @include add-prefix(transition, $transition);
+
+        @include breakpoint(xxl) {
+            padding: 40px 30px;
+        }
+
+        @include hover {
+            @include add-prefix(transform, translateY(-3px));
+        }
+
+    }
+
+    &__thumb {
+        @extend %mb-20;
+    }
+
+    &__content {
+        h4 {
+            @extend %mb-25;
+            color: $theme-color;
+        }
+
+        p {
+            color: $white-color;
+        }
+    }
+
+    &__next,
+    &__prev {
+        @extend %d-inline-block,
+        %text-center;
+        @include box(40px);
+        line-height: 40px;
+        border-radius: 100%;
+        background: rgba($white-color, $alpha: .50);
+        color: $title-color;
+
+        &:hover {
+            background: $gradient-y;
+        }
+
+
+    }
+
+}

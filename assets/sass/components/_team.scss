@@ -1,0 +1,59 @@
+.team {
+    @extend %of-hidden;
+    @include background-cover;
+
+    .section-header__content {
+        @include breakpoint(lg) {
+            p {
+                max-inline-size: 55ch;
+            }
+        }
+
+        p {
+            max-inline-size: 55ch;
+        }
+    }
+
+    &__item {
+        @include add-prefix(transition, $transition);
+        background: $gradient-y-rev;
+        text-align: center;
+
+        &:hover {
+            .team__thumb {
+                img {
+                    @include add-prefix(transform, none);
+
+                }
+            }
+        }
+    }
+
+    &__thumb {
+
+        img {
+            @extend %d-inline-block,
+            %w-100;
+            @include add-prefix(transition, $transition);
+            @include add-prefix(transform, translate(10px, -10px));
+        }
+    }
+
+    &__content {
+        @extend %p-rel,
+        %p-20;
+        z-index: 1;
+
+        h5 {
+            a {
+                color: $title-color;
+            }
+        }
+
+        p {
+            @extend %mb-5;
+            color: #555;
+            @include font-size(16px);
+        }
+    }
+}

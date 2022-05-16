@@ -1,0 +1,11 @@
+.artist {
+    @extend %of-hidden,
+    %p-rel;
+
+    &__thumb {
+        @include breakpoint(lg) {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+}
